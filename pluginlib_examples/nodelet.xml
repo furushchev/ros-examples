@@ -1,0 +1,7 @@
+<library path="lib/libfizz_buzz">
+  <class name="pluginlib_examples/FizzBuzz"
+         type="pluginlib_examples::FizzBuzzNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description>Fizz Buzz</description>
+  </class>
+</library>

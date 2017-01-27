@@ -1,0 +1,19 @@
+<launch>
+  <arg name="manager" default="fizz_buzz_nodelet_manager"/>
+
+  <node name="$(arg manager)" pkg="nodelet" type="nodelet"
+        args="manager" output="screen" />
+  <node name="fizz_buzz"
+        pkg="nodelet" type="nodelet"
+        args="load pluginlib_examples/FizzBuzz $(arg manager)"
+        output="screen">
+    <rosparam>
+      plugins:
+      - pluginlib_examples/fizz
+      - pluginlib_examples/buzz
+    </rosparam>
+    <remap from="~count" to="/counter"/>
+  </node>
+  <node name="count_publisher" pkg="pluginlib_examples" type="count_publisher"
+        output="screen"/>
+</launch>

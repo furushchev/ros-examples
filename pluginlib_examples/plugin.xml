@@ -1,0 +1,12 @@
+<library path="lib/libpluginlib_examples">
+  <class name="pluginlib_examples/fizz"
+         type="pluginlib_examples::PluginFizz"
+         base_class_type="pluginlib_examples::PluginBase">
+    <description>Fizz Plugin</description>
+  </class>
+  <class name="pluginlib_examples/buzz"
+         type="pluginlib_examples::PluginBuzz"
+         base_class_type="pluginlib_examples::PluginBase">
+    <description>Buzz Plugin</description>
+  </class>
+</library>
